@@ -1,5 +1,16 @@
 # 1: Divide and conquer
-# 2:
+def Fab(n):
+    if n ==2:
+        return 2
+    elif n == 1:
+        return 1
+    else:
+        return Fab(n-1)+Fab(n-2)
+print(Fab(5))
+
+
+
+# 2: Find Maxima and Minima using Divide and conquer
 # 3:
 # 4:
 # 5:
