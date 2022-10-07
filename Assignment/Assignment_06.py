@@ -1,4 +1,6 @@
 """
+https://www.geeksforgeeks.org/min-heap-in-python/
+https://www.geeksforgeeks.org/max-heap-in-python/
 1: arr = [1, 3, 7, 9, 12, 10, 8, 16, 18, 22, 27]
 Create a buildHeap method that returns a minheap.
 

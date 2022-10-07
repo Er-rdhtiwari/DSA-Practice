@@ -27,7 +27,18 @@ Output: 3
 Explanation: 0 indicates a good version and 1 indicates a bad version. So, the index of
 the first 1 is at 3. Thus, the output is 3
 """
-
+def index_of_first_bad_product(product_list,start,end):
+    mid = start + (end - start)//2
+    if product_list[0]==1:
+        return 0
+    elif product_list[mid]>0:
+        if product_list[mid-1]!=1:
+            return mid
+        return index_of_first_bad_product(product_list,start, mid-2)
+    elif product_list[mid] == 0:
+        if product_list[mid+1]==1:
+            return mid+1
+        return index_of_first_bad_product(product_list,mid+1,end)
 
 
 """
@@ -40,4 +51,32 @@ Output: True
 Input: 14
 Output: False
 """
+def is_perfect_square(num,start,end):
+    while start <= end:
+        mid = (start + end)//2
+        # print(f"----mid:{mid}")
+        if mid*mid ==num:
+            return True
+        elif mid*mid < num:
+            start = start+1
+            # print(f"----start:{start}")
+            return is_perfect_square(num,mid+1,num)
+        else:
+            end = end -1
+            # print(f"----end:{end}")
+            return is_perfect_square(num,start,mid-1)
+    return False
 
+
+
+
+if __name__ == "__main__":
+    # product_list = [0,0,0,1,1,1,1,1,1]
+    # product_list_2 = [ 1, 1, 1, 1, 1, 1]
+    # start = 0
+    # end = len(product_list)-1
+    # Bad_index = index_of_first_bad_product(product_list,start,end)
+    # print(Bad_index)
+    for i in [26,23,36,49,50,64,81,55,11]:
+        print(is_perfect_square(i,start=0,end=i),":",i, end=" , ")
+        pass
