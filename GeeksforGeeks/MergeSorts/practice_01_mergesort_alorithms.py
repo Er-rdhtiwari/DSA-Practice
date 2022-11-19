@@ -20,12 +20,12 @@ class MergeShort:
     def merge_procesure(self, Arr, start, mid, end):
         Left_array_length = mid-start+1   # start =0
         Right_Array_length = end-mid      # mid !=0
-        i = 0       # left Array pointer
-        j = mid+1   # Right Array pointer
-        k = 0       # original Array pointer
+        i = 0       # left O1_Array pointer
+        j = mid+1   # Right O1_Array pointer
+        k = 0       # original O1_Array pointer
         left_sub_array = Arr[:Left_array_length]
         right_sub_array = Arr[Left_array_length:]
-        # print(left_sub_array, right_sub_array, sep= " <--left Array *|* right Array--> ")
+        # print(left_sub_array, right_sub_array, sep= " <--left O1_Array *|* right O1_Array--> ")
         while i< Left_array_length and j<Right_Array_length:
             if left_sub_array[i]<= right_sub_array[j]:
                 Arr[k]= left_sub_array[i]
@@ -47,15 +47,15 @@ class MergeShort:
         if len(Arr)>1:
             mid = len(Arr)//2
 
-            # Splitting Array in Right and Left Sub Array
+            # Splitting O1_Array in Right and Left Sub O1_Array
             L = Arr[:mid]
             R = Arr[mid:]
 
             self.merge_sort(L)
-            print(L, R, sep=" <--left Array *|* right Array--> ")
+            print(L, R, sep=" <--left O1_Array *|* right O1_Array--> ")
             print("------------------------------")
             self.merge_sort(R)
-            print(L, R, sep=" <--left Array *|* right Array--> ")
+            print(L, R, sep=" <--left O1_Array *|* right O1_Array--> ")
 
             i = j =k =0 # initialising pointer for Left, Right and Arr
 
@@ -68,13 +68,13 @@ class MergeShort:
                     j = j+1
                 k =k+1
 
-            # Checking any Element left in Left sub Array
+            # Checking any Element left in Left sub O1_Array
             while i<len(L):
                 Arr[k]=L[i]
                 i = i+1
                 k = k+1
 
-            # Checking any Element left in Right sub Array
+            # Checking any Element left in Right sub O1_Array
             while j<len(R):
                 Arr[k] = R[j]
                 j = j+1

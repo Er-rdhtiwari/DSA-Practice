@@ -1,5 +1,5 @@
 # 1:  Data Structure: https://github.com/priya6971
-# 2:  Array
+# 2:  O1_Array
 # 3: Searching
 # 4: Linear Search
 
@@ -16,7 +16,7 @@ def search_element(myarr,n):
 # myarr = [20,45,27,47,55,67,75,88,90]
 # print(search_element(myarr,67))
 
-# 5: Binary Search: only for sorted Array: ascending/descending order
+# 5: Binary Search: only for sorted O1_Array: ascending/descending order
 myarr = [1,5,10,25,35,45,78,80,88,89,99,100]
 
 #

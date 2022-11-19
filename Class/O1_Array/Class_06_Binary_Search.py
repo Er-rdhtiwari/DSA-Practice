@@ -1,4 +1,4 @@
-# 1:  Array: Binary Search question and Application
+# 1:  O1_Array: Binary Search question and Application
 """
 Facebook:
 - not sorted array
@@ -65,7 +65,7 @@ def max_profit(arr):
     print(f"---max profit:{Maxprofit}")
     return Maxprofit
 # max_profit(arr)
-# 6: 2D Array: size-3*4
+# 6: 2D O1_Array: size-3*4
 """
 - integer in each row is shorted from left to right
 - first element of each Row> last element of above/previous row
